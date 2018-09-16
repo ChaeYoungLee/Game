@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+	<style type="text/css">
+		body{background-color: #000010; }
+		title{}
+		#ButOff{position: absolute; top: 50%; left: 50%; height: 100px; margin-left: -50px; margin-top: -50px; }
+		#ButOff > #icon {opacity: 0.2; transition: opacity 1s}
+		#ButOff:hover > #icon {opacity: 1;}
+		
+
+
+	</style>
+</head>
+<body>
+	
+	<div id="ButOff">
+	<img src="power-button.png" id="icon" style="height: 100px; cursor: pointer;">
+	</div>
+
+	<audio id="TidoKang">
+		<source src="TidoKang.mp3" type="audio/mpeg">
+	</audio>
+
+<script type="text/javascript">
+		
+	var toggle = "off";
+
+		ButOff.onclick = function(){
+			if(toggle == "off"){
+		icon.setAttribute("src", "game.gif");
+		icon.style.width = "400px";
+		icon.style.height = "300px";
+		icon.style.marginTop = "-100px";
+		icon.style.marginLeft = "-150px";  
+		document.body.style.backgroundColor = "#000030"; 
+		toggle = "on";
+		TidoKang.play();
+	}else{
+		icon.setAttribute("src", "power-button.png");
+		icon.style.width = "100px";
+		icon.style.height = "100px";
+
+		icon.style.marginTop = "0px";
+		icon.style.marginLeft = "0px";  
+		document.body.style.backgroundColor = "#000010";
+		toggle = "off";
+		TidoKang.pause()
+		}
+	}
+
+
+
+
+</script>
+
+</body>
+</html>
